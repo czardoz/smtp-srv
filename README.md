@@ -1,5 +1,8 @@
 # smtp-server
 
+> This is a fork of the [`smtp-server` library](https://github.com/andris9/smtp-server) v1.x which was later relicensed to the EUPL. This fork maintains
+> the original MIT license. It will be maintained and released regularly. Pull requests and bug reports are welcome.
+
 Create SMTP and LMTP server instances on the fly. This is not a full-blown server application like [Haraka](https://haraka.github.io/) but an easy way to add custom SMTP listeners to your app. This module is the successor for the server part of the (now deprecated) SMTP module [simplesmtp](https://www.npmjs.com/package/simplesmtp). For matching SMTP client see [smtp-connection](https://www.npmjs.com/package/smtp-connection).
 
 > **NB!** this module does not make any email deliveries by itself. smtp-server allows you to listen on ports 25/24/465/587/etc using SMTP protocol and that's it. Your own application is responsible of accepting and delivering the message to destination.
@@ -16,19 +19,16 @@ Requires Node v0.12 or iojs. The module does not run on Node v0.10 as it uses [B
   * **[smtp-connection](https://github.com/nodemailer/smtp-connection)** – connect to SMTP servers from your application
   * **[zone-mta](https://github.com/zone-eu/zone-mta)** – full featured outbound MTA built using smtp-connection and smtp-server modules
 
-## Support smtp-server development
-
-[![Donate to author](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DB26KWR2BQX5W)
 
 ## Usage
 
 Install with npm
 
-    npm install smtp-server
+    npm install smtp-srv
 
 Require in your script
 
-    var SMTPServer = require('smtp-server').SMTPServer;
+    var SMTPServer = require('smtp-srv').SMTPServer;
 
 ### Create SMTPServer instance
 
@@ -472,13 +472,9 @@ then the envelope object is going go look like this:
   * **SMTPUTF8** accepts unicode e-mail addresses like *δοκιμή@παράδειγμα.δοκιμή*
   * **SIZE** limits maximum message size
 
-Most notably, the **ENHANCEDSTATUSCODES** extension is not supported, all response codes use the standard three digit format and nothing else. I might change this in the future if I have time to revisit all responses and find the appropriate response codes.
+Most notably, the **ENHANCEDSTATUSCODES** extension is not supported, all response codes use the standard three digit format and nothing else.
 
-**CHUNKING** is also missing. I might add support for it in the future but not at this moment since DATA already accepts a stream and CHUNKING is not supported everywhere.
-
-## Built with *smtp-server*
-
-[![Crisp.im](https://avatars0.githubusercontent.com/u/16270189?v=3&s=32)](http://crisp.im/) **[Crisp.im](http://crisp.im/)**
+**CHUNKING** is also missing.
 
 ## License
 

@@ -1,12 +1,12 @@
 {
-  "name": "smtp-server",
+  "name": "smtp-srv",
   "version": "1.17.0",
   "description": "Create custom SMTP servers on the fly",
   "main": "lib/smtp-server.js",
   "scripts": {
     "test": "grunt mochaTest"
   },
-  "author": "Andris Reinman",
+  "author": "Aniket Panse <aniketpanse@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "ipv6-normalize": "^1.0.1",
@@ -26,12 +26,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/andris9/smtp-server.git"
+    "url": "git://github.com/czardoz/smtp-srv.git"
   },
   "bugs": {
-    "url": "https://github.com/andris9/smtp-server/issues"
+    "url": "https://github.com/czardoz/smtp-srv/issues"
   },
   "keywords": [
-    "SMTP"
+    "SMTP",
+    "server"
   ]
 }
